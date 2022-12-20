@@ -1,0 +1,82 @@
+unit Unit2;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, Buttons, StdCtrls, jpeg, ExtCtrls, DB, ADODB, Menus;
+
+type
+  TForm2 = class(TForm)
+    Image1: TImage;
+    GroupBox1: TGroupBox;
+    Image2: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Edit1: TEdit;
+    SpeedButton1: TSpeedButton;
+    StringGrid1: TStringGrid;
+    Image6: TImage;
+    Image3: TImage;
+    PopupMenu1: TPopupMenu;
+    ADOQuery1: TADOQuery;
+    ADOCommand1: TADOCommand;
+    ADOConnection1: TADOConnection;
+    procedure Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image6MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image5MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image4MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+        Image2.Picture.LoadFromFile('img\house2.jpg');
+end;
+
+
+procedure TForm2.Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+        Image3.Picture.LoadFromFile('img\Katalog2.jpg');
+end;
+
+procedure TForm2.Image4MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+        Image4.Picture.LoadFromFile('img\korzina2.jpg');
+end;
+
+procedure TForm2.Image5MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+        Image5.Picture.LoadFromFile('img\profile2.jpg');
+end;
+
+procedure TForm2.Image6MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+        Image2.Picture.LoadFromFile('img\house.jpg');
+        Image3.Picture.LoadFromFile('img\Katalog1.jpg');
+        Image4.Picture.LoadFromFile('img\korzina1.jpg');
+        image5.Picture.LoadFromFile('img\profile.jpg');
+end;
+
+end.
